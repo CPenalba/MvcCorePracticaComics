@@ -1,0 +1,20 @@
+﻿@model List<Comic>
+
+<h1>Comics SQL y Oracle</h1>
+<p>
+	<a asp-controller="Comics"
+	   asp-action="Create">
+		Create New
+	</a>
+</p>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+	@foreach (Comic c in Model)
+	{
+		<div style="text-align: center;">
+			<img src="@c.Imagen" style="width:200px; height:300px;" />
+			<span style="display: block; font-weight: bold; margin-top: 5px;">@c.Nombre</span>
+			<p >@c.Descripcion</p>
+		</div>
+	}
+</div>

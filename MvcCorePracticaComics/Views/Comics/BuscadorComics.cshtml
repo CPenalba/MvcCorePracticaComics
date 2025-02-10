@@ -1,0 +1,11 @@
+﻿@model Comic@{    List<string> nombres = ViewData["NOMBRE"] as List<string>;}<h1>Buscador comics</h1><form method="post">    <label>Comics: </label>    <select name="nombre" class="form-control">        @foreach (string nom in nombres)
+        {            <option value="@nom">@nom</option>        }    </select>    <button class="btn btn-info">        Buscar comics    </button></form>@if(Model != null){    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+	
+		<div style="text-align: center;">
+			<img src="@Model.Imagen" style="width:200px; height:300px;" />
+			<span style="display: block; font-weight: bold; margin-top: 5px;">@Model.Nombre</span>
+			<p >@Model.Descripcion</p>
+		</div>
+	
+</div>
+}
