@@ -9,15 +9,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MvcCorePracticaComics.Repositories
 {
-    #region
-//    create procedure SP_INSERTAR_COMIC
-//    (@nombre nvarchar(50), @imagen nvarchar(50), @descripcion nvarchar(50))
-//as
-//declare @nextId int
-//select @nextId = MAX(IDCOMIC) + 1 from COMICS
-//insert into COMICS values(@nextId, @nombre, @imagen, @descripcion)
-//go
-    #endregion
     public class RepositoryComics
     {
         private DataTable tablaComics;
